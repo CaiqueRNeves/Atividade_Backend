@@ -1,0 +1,163 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="mb-0">
+            <i class="fas fa-map-marked-alt me-2"></i> Mapa de Belém do Pará
+        </h1>
+        <button class="btn btn-outline-primary" onclick="window.print()">
+            <i class="fas fa-print me-2"></i> Imprimir
+        </button>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <div id="map" class="map-container" style="height: 500px; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center;">
+                <div class="text-center">
+                    <h2 class="mb-3">Carregando mapa...</h2>
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Carregando...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Pontos Turísticos em Belém</h5>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Mercado Ver-o-Peso</h5>
+                                <span class="badge bg-primary rounded-pill">Atração</span>
+                            </div>
+                            <p class="mb-1">Famoso mercado a céu aberto, patrimônio histórico de Belém.</p>
+                            <small class="text-muted">Av. Boulevard Castilhos França, s/n - Campina</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Estação das Docas</h5>
+                                <span class="badge bg-warning rounded-pill">Gastronomia</span>
+                            </div>
+                            <p class="mb-1">Complexo turístico e gastronômico com bares e restaurantes.</p>
+                            <small class="text-muted">Av. Boulevard Castilhos França, s/n - Campina</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Basílica de Nazaré</h5>
+                                <span class="badge bg-primary rounded-pill">Atração</span>
+                            </div>
+                            <p class="mb-1">Santuário que abriga a imagem de Nossa Senhora de Nazaré.</p>
+                            <small class="text-muted">Praça Santuário, s/n - Nazaré</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Mangal das Garças</h5>
+                                <span class="badge bg-primary rounded-pill">Atração</span>
+                            </div>
+                            <p class="mb-1">Parque naturalístico com fauna e flora amazônicas.</p>
+                            <small class="text-muted">Rua Carneiro da Rocha, s/n - Cidade Velha</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Museu Emílio Goeldi</h5>
+                                <span class="badge bg-primary rounded-pill">Atração</span>
+                            </div>
+                            <p class="mb-1">Museu de história natural e centro de pesquisa científica.</p>
+                            <small class="text-muted">Av. Magalhães Barata, 376 - São Brás</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">Legenda</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="bg-primary rounded-circle me-2" style="width: 15px; height: 15px;"></div>
+                        <span>Atração Turística</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="bg-warning rounded-circle me-2" style="width: 15px; height: 15px;"></div>
+                        <span>Gastronomia</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="bg-success rounded-circle me-2" style="width: 15px; height: 15px;"></div>
+                        <span>Hospedagem</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="bg-info rounded-circle me-2" style="width: 15px; height: 15px;"></div>
+                        <span>Compras</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Tours Próximos</h5>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Tour Gastronômico</h6>
+                                <small>Hoje, 18:00</small>
+                            </div>
+                            <small>Estação das Docas, Belém</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Mercado Ver-o-Peso</h6>
+                                <small>Amanhã, 09:00</small>
+                            </div>
+                            <small>Centro, Belém</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Basílica de Nazaré</h6>
+                                <small>15/11, 14:00</small>
+                            </div>
+                            <small>Nazaré, Belém</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Quando o Google Maps estiver disponível, este script será substituído
+    // por uma implementação completa em map.js
+    setTimeout(() => {
+        const mapContainer = document.getElementById('map');
+        mapContainer.innerHTML = `
+            <div class="text-center p-5">
+                <h3 class="mb-3">Mapa de Pontos Turísticos de Belém</h3>
+                <p class="mb-4">O mapa interativo está temporariamente indisponível.</p>
+                <p>Consulte a lista de pontos turísticos ao lado para mais informações.</p>
+            </div>
+        `;
+    }, 1500);
+});
+</script>
+
+<!-- Carregamento seguro do Google Maps -->
+<script>
+    function initMap() {
+        console.log('Google Maps API carregada com sucesso');
+        // O script em map.js será executado após o carregamento da API
+    }
+    </script>
+    <script src="/js/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+
+<%- include('../partials/footer') %>
